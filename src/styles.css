@@ -16,20 +16,21 @@ body {
     border-radius: 10px;
     border: 1px solid grey;
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%) 1fr));
     grid-template-rows: 1fr 0.75fr 0.75fr;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     grid-gap: 1rem;
     justify-content: center;
     width: 100%;
     max-width: 720px;
     min-width: 320px;
+    max-height: 276px;
     margin: 0 auto;
 }
 
 .item {
     padding: 10px;
-    
-    border: 1px solid black;
+
+    /* border: 1px solid black; */
 }
 
 .leftside {
@@ -37,7 +38,7 @@ body {
     justify-content: center;
     align-items: center;
     grid-column: 1;
-    grid-row: 1 / 4;    
+    grid-row: 1 / 4;
     object-fit: contain;
     width: 100%;
 }
@@ -68,7 +69,7 @@ h2 {
 .buy-button {
     border-radius: 5px;
     border: 1px;
-    padding: 15px;    
+    padding: 15px;
 }
 
 .button-text {
@@ -95,89 +96,55 @@ h2 {
 /* xxs */
 @media (max-width: 424px) {
 
-    .container {
-        display: none;
-    }
+   
 }
 
-@media (min-width: 425px) { /*//!!!!!!!!!!!!!!!! */
-    /*.container-mobile { 
-        display: none;
-    }*/
-}
+
 
 /* xs */
 @media (max-width: 475px) {
-    .leftside {
-        width: 50%;
-    }
 
-    .middle-container {
-        font-size: 12px;
-    }
-
-    .header {
-        overflow: auto;
-    }
-
-    h2 {
-        font-size: 21px;
-    }
-
-    .buy-button {
-        padding: 12px;
-    }
-
-    .button-text {
-        font-size: 1.2em;
-    }
-
-    .footer {
-        font-size: 12px;
-    }
-
-    .header, .footer {
-        overflow: visible;
-    }
 }
 
 /* sm */
-@media (max-width: 640px) {
-
-    .middle-container {
-        font-size: 14px;
+@media (max-width: 499px) {
+    .container {
+        display: none;
     }
 
-    .buy-button {
-        padding: 15px;
+}
+
+@media (min-width: 500px) {
+    /*TOOO 2nd container display: none: */
+}
+
+/* sm */
+@media (max-width: 641px) {
+    .container {
+        /* grid-template-rows: 1fr 0.4fr 1fr; */
     }
 
     .header {
-        overflow-x: auto;
+        font-size: 12px;
     }
 
     .footer {
-        overflow-x: auto;
-        font-size: 14px;
-    }
-
-    h2 {
-        font-size: 21px;
-    }
-
-    .buy-button {
-        padding: 12px;
-    }
-
-    .button-text {
-        font-size: 1.2em;
+        font-size: 13px;
     }
 }
 
 @media (max-width: 720px) {
-    
+    .container {
+        grid-gap: 0.5rem;
+    }
+
+    .header {
+        font-size: 13px;
+    }
 }
 
 @media (max-width: 768px) {
-    
+    .rightside {
+        padding-right: 25px;
+    }
 }
